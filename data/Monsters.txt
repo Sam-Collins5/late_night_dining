@@ -1,0 +1,41 @@
+Culp Chair;6;15;A plastic chair from the second floor of the culp center, it's relatively strong.;Steel Legs
+Hardened Burger;7;15;A burger that sat out in the dinning hall for way too long, it's relatively strong.;Burger Chomp
+Starbucks Sign;10;10;The sign covered in ads just outside of the Starbucks in the culp, it's got a strong swing.;Body Slam
+Steaming Vegetable Soup;8;10;A hot pot of untouched soup from the dining hall, it's well rounded.;Burning Sensation
+Taco Bell;5;25;The entire Taco Bell ripped out of the first floor wall of the culp center to attack you, it's very defensive.;Nachos BellGrande
+Mein Bowl Roll;3;10;A sentient and breathing sushi roll from Mein Bowl, it's very weak.;Barrel Roll
+Cave TV;15;20;A TV jumped from the wall in the Culp Cave. Its playing Virtual Insantiy on repeat, it's a formidable opponent.;Bird Out Of Cage
+One Ply Toilet Paper;2;5;A roll of toilet paper from the bathrooms in the culp, it's very weak.;Tear
+Cushion;1;25;A cushion from the chairs outside the culp, its really fluffy and weak.;Fluff
+Janitor;5;18;Janitor for the culp, looks really upset that youre here after hours.;Sweeping Edge
+Plant;3;10;Small plant inside the culp, not very strong or defensive.;Photosynthesize
+Fire Exinguisher;7;10;Fire exiguisher that broke out of its cage in the culp, looks strong.;Ablaze
+Shipping Box;0;1;Just a box, not an enemy or anything, just a box.;Nothing
+Curling Puc;8;15;Curling puc from the table game beside the elevators, packs quite a punch.;Bonspiel
+Printer;5;13;Random printer placed inside the culp, seriously, who uses it?;Photocopy
+Feedback Machine;10;10;Machine that lets students give feedback on various things, causes a lot of emotional damage.;GaslightGatekeepGirlboss
+Text Book Fees;15;20;Various fee receipts for textbooks, cuts deep in the wallet of a college student.;Bankruptcy
+Fireplace;10;10;Fireplace by the Starbucks roars its fire at you, fire's real hot.;3rd Degree Burns
+Chick-Fil-A;15;15;The entire Taco Bell ripped out of the first floor wall of the culp center to attack you, Tough but well rounded.;My Pleasure
+Expresso Machine;5;12;Expresso machine from Starbucks, it's throwing expresso pucs all over the place.;Expresso Puc
+Trash Can;3;10;Leftover garbage can from a janitor, its pretty week but you better hope its alone.;Landfill
+Rocking Chair;5;17;Rocking chair left over by Starbucks, its aggressively rocking.;Rock'n Roll
+Urinal;3;25;A urinal from the mens restroom in the culp, dosen't look like it packs much of a punch.;Flush
+Finacial Aid Office;15;10;Office located on the 2nd floor of the culp, a place where either dreams are fufilled or crushed.;Student Loans
+Newspaper;1;10;Rolled up East Tennessean newspaper on the floor, looks very weak.;Edge 89.5HD4
+Water Fountain;5;15;Water fountain used to drink from and also fill up water bottles.;Squirt
+iDBuc$ Machine;7;12;Machine located on both the 1st and 2nd floors of the culp, used to transfer currency to iDBuc's.;Dabloons
+Piano;10;15;Large piano on the 3rd floor of the culp, many students use this to practice their skills.;Merry-Go-Round of Life
+Starbucks Popsicle Stick;1;1;A small wooden popsicle stick from Starbucks, could probably break it just by looking at it.;Snap
+Defibrillator;15;20;Located on the 3rd floor of the culp, used to save lifes but unfortunately, its out for blood.;Electroshock Arm
+Elevator;15;20;Helps people get up and down the floors of the culp easily, but seem to break every other week.;Break
+Soap Dispenser;5;10;Dispenser of soap located near Mein Bowl, looks like its out to cut you clean.;Soap
+Pre-Order Water Cup;6;15;The worlds holiest beverage made by the Logan Giles.;Cold As Ice
+Rocks;10;10;A large rock located right outside the culp, looks quite tuff.;Stoned
+Steel Glass Doors;5;20;Doors to the entrance of the culp, very heavy.;Under Pressure
+Wasp;20;1;Small insect that found its way into the culp, packs quite the punch but has little to no health.;Bugged Out
+Napkin Dispenser;4;12;Dispenser for napkins from the dinning hall in the culp, pretty average stats.;Freaky Sheets
+Salt Shaker;3;8;Salt shaker that can be found in the dinning hall at the culp, doesn't look like much of a threat.;Salty Wounds
+Soda Machine;7;21;The new and less improved soda machine from the dinning hall in the culp!;Diet Destruction
+Panini Press;10;20;Panini Press in the culp used to toast and heat up sandwiches, has been broken for longer than I've been enrolled.;Sandwich Failure
+Oven;8;17;Oven located in the back of the dinning hall, hot to the touch and packs quite a punch.;Buffalo Pizza Punch
