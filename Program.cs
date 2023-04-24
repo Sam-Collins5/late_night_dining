@@ -9,7 +9,7 @@ Battling(battle);
 //Method for running a battle
 static void Battling(Battle battle)
 {
-    Console.WriteLine($"You ran into {battle.Monster.Name}! - {battle.Monster.Desc}");
+    Console.WriteLine($"You ran into {battle.Monster.nameToString()}! - {battle.Monster.Desc}");
     Console.WriteLine($"A battle has begun!");
     battle.Turn = battle.InitativeRoll();
     if (battle.Turn == 0)
@@ -18,7 +18,7 @@ static void Battling(Battle battle)
     }
     else
     {
-        Console.WriteLine($"{battle.Monster.Name} goes first.");
+        Console.WriteLine($"{battle.Monster.nameToString()} goes first.");
     }
     
     while (battle.IsBattling == true)
@@ -26,7 +26,7 @@ static void Battling(Battle battle)
         if (battle.Turn == 0)
         {
             Console.WriteLine("It's your turn.");
-            Console.WriteLine($"You attack {battle.Monster.Name}.");
+            Console.WriteLine($"You attack {battle.Monster.nameToString()}.");
             int attack = battle.AttackRoll();
             if (attack < 3)
             {
@@ -41,14 +41,14 @@ static void Battling(Battle battle)
                     Console.WriteLine("CRITICAL HIT!");
                 }
                 Console.WriteLine($"Your attack hits dealing {battle.GetPlayerDamage(battle.Weapon, battle.Player.Power, battle.IsCrit)} damage.");
-                Console.WriteLine($"{battle.Monster.Name} has {battle.Monster.Health} health remaining");
+                Console.WriteLine($"{battle.Monster.nameToString()} has {battle.Monster.Health} health remaining");
                 battle.ChangeTurn();
             }
         }
         else
         {
-            Console.WriteLine($"It's {battle.Monster.Name}'s turn.");
-            Console.WriteLine($"{battle.Monster.Name} attacks you with {battle.Monster.Attack}!");
+            Console.WriteLine($"It's {battle.Monster.nameToString()}'s turn.");
+            Console.WriteLine($"{battle.Monster.nameToString()} attacks you with {battle.Monster.Attack}!");
             int attack = battle.AttackRoll();
             if (attack < 5) 
             {
@@ -75,7 +75,7 @@ static void Battling(Battle battle)
         }
         else if (battle.Monster.Health <= 0)
         {
-            Console.WriteLine($"You defeated {battle.Monster.Name}!");
+            Console.WriteLine($"You defeated {battle.Monster.nameToString()}!");
             battle.IsBattling = false;
         }
     }
