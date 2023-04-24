@@ -15,34 +15,34 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MidnightDining
+namespace Project_5
 {
-    internal class Score
+    public class Score
     {
         //attributes
         //------------------------------------------------------------------------------------------------------
-        public string name { get; set; }
-        public int score { get; set; }
+        public string Name { get; set; }
+        public int Points { get; set; }
         //------------------------------------------------------------------------------------------------------
 
         //constructors
         //------------------------------------------------------------------------------------------------------
         public Score()
         {
-            this.name = "Player";
-            this.score = 0;
+            this.Name = "Player";
+            this.Points = 0;
         }
 
-        public Score(string name, int score)
+        public Score(string name, int points)
         {
-            this.name = name;
-            this.score = score;
+            this.Name = name;
+            this.Points = points;
         }
 
         public Score(Player another)
         {
-            this.name = another.name;
-            this.score = another.score;
+            this.Name = another.Name;
+            this.Points = another.Score;
         }
         //------------------------------------------------------------------------------------------------------
     }
