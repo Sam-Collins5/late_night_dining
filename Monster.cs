@@ -18,15 +18,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 
-namespace MidnightDining
+namespace Project_5
 {
-    internal class Monster : Beings
+    public class Monster : Beings
     {
         //attributes
         //------------------------------------------------------------------------------------------------------
-        public Names name { get; set; }
-        public string type { get; set; }
-        public string attack { get; set; }
+        public Names Name { get; set; }
+        public string Type { get; set; }
+        public string Attack { get; set; }
 
         //------------------------------------------------------------------------------------------------------
 
@@ -41,8 +41,8 @@ namespace MidnightDining
             int randName = random.Next(0, Enum.GetNames(typeof(Names)).Length);
             int randType = random.Next(1, 42);
 
-            this.name = (Names)Enum.Parse(typeof(Names), Convert.ToString(randName));
-            this.pos = new int[2];
+            this.Name = (Names)Enum.Parse(typeof(Names), Convert.ToString(randName));
+            this.Pos = new int[2];
 
             //reads from the Monster.txt file to get the data of the random monster
             //each line is as follows Type,Power,Health,Desc,Attack
@@ -61,11 +61,11 @@ namespace MidnightDining
 
                 string[] monsterDataArr = monsterData.Split(";");
 
-                this.type = monsterDataArr[0];
-                this.power = Convert.ToInt32(monsterDataArr[1]);
-                this.health = Convert.ToInt32(monsterDataArr[2]);
-                this.desc = monsterDataArr[3];
-                this.attack = monsterDataArr[4];
+                this.Type = monsterDataArr[0];
+                this.Power = Convert.ToInt32(monsterDataArr[1]);
+                this.Health = Convert.ToInt32(monsterDataArr[2]);
+                this.Desc = monsterDataArr[3];
+                this.Attack = monsterDataArr[4];
 
                 rdr.Close();
             }
@@ -73,11 +73,11 @@ namespace MidnightDining
             {
                 Console.WriteLine(ex.Message);
                 Console.WriteLine("Default monster values set");
-                this.type = "Ork";
-                this.desc = "Default Monster";
-                this.health = 20;
-                this.power = 4;
-                this.attack = "it's body";
+                this.Type = "Ork";
+                this.Desc = "Default Monster";
+                this.Health = 20;
+                this.Power = 4;
+                this.Attack = "it's body";
             }
 
             
@@ -85,12 +85,13 @@ namespace MidnightDining
 
         public Monster(Monster another)
         {
-            this.name = another.name;
-            this.type = another.type;
-            this.desc = another.desc;
-            this.health = another.health;
-            this.power = another.power;
-            this.pos = another.pos;
+            this.Name = another.Name;
+            this.Type = another.Type;
+            this.Desc = another.Desc;
+            this.Health = another.Health;
+            this.Power = another.Power;
+            this.Attack = another.Attack;
+            this.Pos = another.Pos;
         }
         //------------------------------------------------------------------------------------------------------
 
@@ -101,7 +102,7 @@ namespace MidnightDining
         public string nameToString()
         {
             //Takes Name enum and converts it into a name with spaces instead of _
-            char[] nameArr = Convert.ToString(name).ToCharArray();
+            char[] nameArr = Convert.ToString(Name).ToCharArray();
             string newName = "";
             foreach (char item in nameArr)
             {
@@ -121,7 +122,7 @@ namespace MidnightDining
         //displays monsters info
         public string ToString()
         {
-            return $"Name: {nameToString()} the {type}\nHP: {health}\nATK: {power}\nDesc: {desc}";
+            return $"Name: {nameToString()} the {Type}\nHP: {Health}\nATK: {Power}\nDesc: {Desc}";
         }
 
     }

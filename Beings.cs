@@ -16,17 +16,17 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MidnightDining
+namespace Project_5
 {
-    internal class Beings
+    public class Beings
     {
         //attributes
         //------------------------------------------------------------------------------------------------------
-        public string name { get; set; }
-        public string desc { get; set; }
-        public int health { get; set; }
-        public int power { get; set; }
-        public int[] pos { get; set; }
+        public string Name { get; set; }
+        public string Desc { get; set; }
+        public int Health { get; set; }
+        public int Power { get; set; }
+        public int[] Pos { get; set; }
         //------------------------------------------------------------------------------------------------------
 
 
@@ -35,29 +35,29 @@ namespace MidnightDining
 
         public Beings()
         {
-            this.name = "Entity 0";
-            this.desc = "A being that is not suppose to be here.";
-            this.health = 1;
-            this.power = 0;
-            this.pos = new int[2];
+            this.Name = "Entity 0";
+            this.Desc = "A being that is not suppose to be here.";
+            this.Health = 1;
+            this.Power = 0;
+            this.Pos = new int[2];
         }
 
         public Beings(string name, string desc)
         {
-            this.name = name;
-            this.desc = desc;
-            this.health = 1;
-            this.power = 0;
-            this.pos = new int[2];
+            this.Name = name;
+            this.Desc = desc;
+            this.Health = 1;
+            this.Power = 0;
+            this.Pos = new int[2];
         }
 
         public Beings(Beings another)
         {
-            this.name = another.name;
-            this.desc = another.desc;
-            this.health = another.health;
-            this.power = another.power;
-            this.pos = another.pos;
+            this.Name = another.Name;
+            this.Desc = another.Desc;
+            this.Health = another.Health;
+            this.Power = another.Power;
+            this.Pos = another.Pos;
         }
         //------------------------------------------------------------------------------------------------------
 
@@ -67,7 +67,7 @@ namespace MidnightDining
         //displays beings's info
         public string ToString()
         {
-            return $"Name: {name}\nHP: {health}\nATK: {power}\nDesc: {desc}";
+            return $"Name: {Name}\nHP: {Health}\nATK: {Power}\nDesc: {Desc}";
         }
         //------------------------------------------------------------------------------------------------------
 

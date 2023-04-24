@@ -20,16 +20,17 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MidnightDining
+namespace Project_5
 {
-    internal class Player : Beings
+    public class Player : Beings
     {
         //attributes
         //------------------------------------------------------------------------------------------------------
         //change these to Weapon objects
-        public string hand { get; set; }
-        public List<string> inventory { get; set; }
-        public int score { get; set; }
+        public string Hand { get; set; }
+        public List<string> Inventory { get; set; }
+        public int Score { get; set; }
+
         //-------------------------------
         //------------------------------------------------------------------------------------------------------
 
@@ -37,50 +38,50 @@ namespace MidnightDining
         //------------------------------------------------------------------------------------------------------
         public Player()
         {
-            this.name = "Player";
-            this.desc = "Default Player Description";
-            this.health = 100;
-            this.power = 5;
-            this.score = 0;
+            this.Name = "Player";
+            this.Desc = "Default Player Description";
+            this.Health = 100;
+            this.Power = 5;
+            this.Score = 0;
 
-            this.pos = new int[2];
-            this.pos[0] = 0;
-            this.pos[1] = 0;
+            this.Pos = new int[2];
+            this.Pos[0] = 0;
+            this.Pos[1] = 0;
 
             //change these to Weapon objects
-            hand = "fists";
-            inventory = new List<string>();
+            this.Hand = "fists";
+            this.Inventory = new List<string>();
             //-------------------------------
         }
 
         public Player(string name)
         {
-            this.name = name;
-            this.desc = "Fully clean and healhty traveler, not a scratch on yourself!";
-            this.health = 100;
-            this.power = 5;
-            this.score = 0;
+            this.Name = name;
+            this.Desc = "Fully clean and healhty traveler, not a scratch on yourself!";
+            this.Health = 100;
+            this.Power = 5;
+            this.Score = 0;
 
-            this.pos = new int[2];
-            this.pos[0] = 0;
-            this.pos[1] = 0;
+            this.Pos = new int[2];
+            this.Pos[0] = 0;
+            this.Pos[1] = 0;
 
             //change these to Weapon objects
-            this.hand = "fists";
-            this.inventory = new List<string>();
+            this.Hand = "fists";
+            this.Inventory = new List<string>();
             //-------------------------------
         }
 
         public Player(Player another)
         {
-            this.name = another.name;
-            this.desc = another.desc;
-            this.health = another.health;
-            this.power = another.power;
-            this.pos = another.pos;
-            this.hand = another.hand;
-            this.inventory = another.inventory;
-            this.score = another.score;
+            this.Name = another.Name;
+            this.Desc = another.Desc;
+            this.Health = another.Health;
+            this.Power = another.Power;
+            this.Pos = another.Pos;
+            this.Hand = another.Hand;
+            this.Inventory = another.Inventory;
+            this.Score = another.Score;
         }
         //------------------------------------------------------------------------------------------------------
 
@@ -96,22 +97,22 @@ namespace MidnightDining
 
             if (direction.ToLower() == "north")
             {
-                this.pos[1] += 1;
+                this.Pos[1] += 1;
                 moveFlag = true;
             }
             else if (direction.ToLower() == "east")
             {
-                this.pos[0] += 1;
+                this.Pos[0] += 1;
                 moveFlag = true;
             }
             else if (direction.ToLower() == "south")
             {
-                this.pos[1] -= 1;
+                this.Pos[1] -= 1;
                 moveFlag = true;
             }
             else if (direction.ToLower() == "west")
             {
-                this.pos[0] -= 1;
+                this.Pos[0] -= 1;
                 moveFlag = true;
             }
 
@@ -127,7 +128,7 @@ namespace MidnightDining
         //this command doesn't check to see if said item is present
         public string PickUp(string item)
         {
-            inventory.Add(item);
+            Inventory.Add(item);
             return $"Picked up {item}.";
         }
 
@@ -135,7 +136,7 @@ namespace MidnightDining
         public string DisplayInventory()
         {
             string invString = "Inventory:\n";
-            foreach (string item in inventory)
+            foreach (string item in Inventory)
             {
                 invString += item + ",\n";
             }
@@ -177,30 +178,30 @@ namespace MidnightDining
             //int counter = scores.Length - 1;
             for (int i = scores.Length - 1; i >= 0; i--)
             {
-                if (scores[i].score < this.score)
+                if (scores[i].Points < this.Score)
                 {
                     for (int e = i; i >= 0; i--)
                     {
                         if (check == true)
                         {
-                            tempName = scores[i].name;
-                            tempScore = scores[i].score;
-                            scores[i].name = this.name;
-                            scores[i].score = this.score;
+                            tempName = scores[i].Name;
+                            tempScore = scores[i].Points;
+                            scores[i].Name = this.Name;
+                            scores[i].Points = this.Score;
                             check = false;
                         }
                         else if (i == 0)
                         {
                             
-                            scores[i].name = tempName;
-                            scores[i].score = tempScore;
+                            scores[i].Name = tempName;
+                            scores[i].Points = tempScore;
                         }
                         else
                         {
-                            tempName2 = scores[i].name;
-                            tempScore2 = scores[i].score;
-                            scores[i].name = tempName;
-                            scores[i].score = tempScore;
+                            tempName2 = scores[i].Name;
+                            tempScore2 = scores[i].Points;
+                            scores[i].Name = tempName;
+                            scores[i].Points = tempScore;
                             tempName = tempName2;
                             tempScore = tempScore2;
                         }
@@ -217,7 +218,7 @@ namespace MidnightDining
 
                 for (int i = 0; i <= dataLength; i++)
                 {
-                    rwr.WriteLine($"{scores[i].name};{scores[i].score}");
+                    rwr.WriteLine($"{scores[i].Name};{scores[i].Points}");
                 }
 
                 rwr.Close();
@@ -263,40 +264,40 @@ namespace MidnightDining
         public string ToString()
         {
             //changes player description based on health.
-            if (health == 100)
+            if (Health == 100)
             {
-                desc = "Fully clean and healhty traveler, not a scratch on yourself!";
+                Desc = "Fully clean and healhty traveler, not a scratch on yourself!";
             }
-            else if (health < 100 && health >= 90)
+            else if (Health < 100 && Health >= 90)
             {
-                desc = "Clean and healthy traveler, a few bruises.";
+                Desc = "Clean and healthy traveler, a few bruises.";
             }
-            else if (health < 90 && health >= 80)
+            else if (Health < 90 && Health >= 80)
             {
-                desc = "Dirty but mostly healthy traveler, a few cuts and bruises.";
+                Desc = "Dirty but mostly healthy traveler, a few cuts and bruises.";
             }
-            else if (health < 80 && health >= 75)
+            else if (Health < 80 && Health >= 75)
             {
-                desc = "Slightly wounded traveler, badly bruised and cut.";
+                Desc = "Slightly wounded traveler, badly bruised and cut.";
             }
-            else if (health < 75 && health >= 50)
+            else if (Health < 75 && Health >= 50)
             {
-                desc = "Wounded traveler, badly bruised and minor fractures in legs.";
+                Desc = "Wounded traveler, badly bruised and minor fractures in legs.";
             }
-            else if (health < 50 && health >= 25)
+            else if (Health < 50 && Health >= 25)
             {
-                desc = "Badly wounded traveler, broken arm with minor fractures in legs";
+                Desc = "Badly wounded traveler, broken arm with minor fractures in legs";
             }
-            else if (health< 25 && health> 0)
+            else if (Health< 25 && Health> 0)
             {
-                desc = "critically wounded traveler, broken arm and multiple fractured bones.";
+                Desc = "critically wounded traveler, broken arm and multiple fractured bones.";
             }
             else
             {
-                desc = "Traveler was critically wounded and has fainted.";
+                Desc = "Traveler was critically wounded and has fainted.";
             }
 
-            return $"Name: {name}\nHolding: {hand}\nHP: {health}\nATK: {power}\nDesc: {desc}\n{DisplayInventory()}";
+            return $"Name: {Name}\nHolding: {Hand}\nHP: {Health}\nATK: {Power}\nDesc: {Desc}\n{DisplayInventory()}";
         }
         //------------------------------------------------------------------------------------------------------
 

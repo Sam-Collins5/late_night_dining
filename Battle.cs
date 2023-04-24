@@ -67,27 +67,27 @@ namespace Project_5
         //Methods
         public void PlayerAttack()
         {
-            Monster.health -= GetPlayerDamage(Weapon, Player.power, IsCrit);
+            Monster.Health -= GetPlayerDamage(Weapon, Player.Power, IsCrit);
         }
 
         public void MonsterAttack()
         {
-            Player.health -= GetMonsterDamage(Monster.power, IsCrit);
+            Player.Health -= GetMonsterDamage(Monster.Power, IsCrit);
         }
 
         public int GetPlayerDamage(BaseWeapon weapon, int power, bool isCrit)
         {
             if (isCrit == true && Weapon != null )
             {
-                power = (Player.power + weapon.BonusDamage) * 2;
+                power = (Player.Power + weapon.BonusDamage) * 2;
             }
             if (isCrit == true)
             {
-                power = Player.power * 2;
+                power = Player.Power * 2;
             }
             else if (Weapon != null)
             {
-                power = Player.power + Weapon.BonusDamage;
+                power = Player.Power + Weapon.BonusDamage;
             }
             else
             {
@@ -100,7 +100,7 @@ namespace Project_5
         {
             if (isCrit == true)
             {
-                power = Monster.power * 2;
+                power = Monster.Power * 2;
             }
             else
             {
