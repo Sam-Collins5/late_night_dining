@@ -67,31 +67,54 @@ namespace Project_5
         //Methods
         public void PlayerAttack()
         {
-            Monster.Health -= GetPlayerDamage(Weapon, Player.Power, IsCrit);
+            Monster.health -= GetPlayerDamage(Weapon, Player.power, IsCrit);
         }
 
         public void MonsterAttack()
         {
-            Player.Health -= GetMonsterDamage(Monster.Power, IsCrit);
+            Player.health -= GetMonsterDamage(Monster.power, IsCrit);
         }
 
         public int GetPlayerDamage(BaseWeapon weapon, int power, bool isCrit)
         {
-            if (isCrit == true && Weapon != null )
+            if (isCrit == true && Weapon != null)
             {
-                power = (Player.Power + weapon.BonusDamage) * 2;
+                power = (Player.power + weapon.BonusDamage) * 2;
             }
             if (isCrit == true)
             {
-                power = Player.Power * 2;
+                power = Player.power * 2;
             }
             else if (Weapon != null)
             {
-                power = Player.Power + Weapon.BonusDamage;
+                power = Player.power + Weapon.BonusDamage;
             }
             else
             {
-                
+
+            }
+            return power;
+        }
+
+        public int GetPlayerDamageWithGun(Gun weapon, int power, bool isCrit)
+        {
+            if (isCrit == true && Weapon != null)
+            {
+                power = (Player.power + weapon.BonusDamage) * 2;
+                weapon.UsedAmmo();
+            }
+            if (isCrit == true)
+            {
+                power = Player.power * 2;
+            }
+            else if (Weapon != null)
+            {
+                power = Player.power + Weapon.BonusDamage;
+                weapon.UsedAmmo();
+            }
+            else
+            {
+
             }
             return power;
         }
@@ -100,7 +123,7 @@ namespace Project_5
         {
             if (isCrit == true)
             {
-                power = Monster.Power * 2;
+                power = Monster.power * 2;
             }
             else
             {
