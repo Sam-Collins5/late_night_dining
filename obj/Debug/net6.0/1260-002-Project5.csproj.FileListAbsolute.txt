@@ -13,3 +13,18 @@ C:\Users\nicka\Downloads\late_night_dining-main\obj\Debug\net6.0\refint\1260-002
 C:\Users\nicka\Downloads\late_night_dining-main\obj\Debug\net6.0\1260-002-Project5.pdb
 C:\Users\nicka\Downloads\late_night_dining-main\obj\Debug\net6.0\1260-002-Project5.genruntimeconfig.cache
 C:\Users\nicka\Downloads\late_night_dining-main\obj\Debug\net6.0\ref\1260-002-Project5.dll
+C:\Users\nicka\Documents\College Documents\Classes\CSCI 1260 - Intro to Comp. Sci. 2\Projects\1260-002-CrumpNick-CollinsSam-FlahertyLogan-Project5\bin\Debug\net6.0\1260-002-Project5.exe
+C:\Users\nicka\Documents\College Documents\Classes\CSCI 1260 - Intro to Comp. Sci. 2\Projects\1260-002-CrumpNick-CollinsSam-FlahertyLogan-Project5\bin\Debug\net6.0\1260-002-Project5.deps.json
+C:\Users\nicka\Documents\College Documents\Classes\CSCI 1260 - Intro to Comp. Sci. 2\Projects\1260-002-CrumpNick-CollinsSam-FlahertyLogan-Project5\bin\Debug\net6.0\1260-002-Project5.runtimeconfig.json
+C:\Users\nicka\Documents\College Documents\Classes\CSCI 1260 - Intro to Comp. Sci. 2\Projects\1260-002-CrumpNick-CollinsSam-FlahertyLogan-Project5\bin\Debug\net6.0\1260-002-Project5.dll
+C:\Users\nicka\Documents\College Documents\Classes\CSCI 1260 - Intro to Comp. Sci. 2\Projects\1260-002-CrumpNick-CollinsSam-FlahertyLogan-Project5\bin\Debug\net6.0\1260-002-Project5.pdb
+C:\Users\nicka\Documents\College Documents\Classes\CSCI 1260 - Intro to Comp. Sci. 2\Projects\1260-002-CrumpNick-CollinsSam-FlahertyLogan-Project5\obj\Debug\net6.0\1260-002-Project5.csproj.AssemblyReference.cache
+C:\Users\nicka\Documents\College Documents\Classes\CSCI 1260 - Intro to Comp. Sci. 2\Projects\1260-002-CrumpNick-CollinsSam-FlahertyLogan-Project5\obj\Debug\net6.0\1260-002-Project5.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nicka\Documents\College Documents\Classes\CSCI 1260 - Intro to Comp. Sci. 2\Projects\1260-002-CrumpNick-CollinsSam-FlahertyLogan-Project5\obj\Debug\net6.0\1260-002-Project5.AssemblyInfoInputs.cache
+C:\Users\nicka\Documents\College Documents\Classes\CSCI 1260 - Intro to Comp. Sci. 2\Projects\1260-002-CrumpNick-CollinsSam-FlahertyLogan-Project5\obj\Debug\net6.0\1260-002-Project5.AssemblyInfo.cs
+C:\Users\nicka\Documents\College Documents\Classes\CSCI 1260 - Intro to Comp. Sci. 2\Projects\1260-002-CrumpNick-CollinsSam-FlahertyLogan-Project5\obj\Debug\net6.0\1260-002-Project5.csproj.CoreCompileInputs.cache
+C:\Users\nicka\Documents\College Documents\Classes\CSCI 1260 - Intro to Comp. Sci. 2\Projects\1260-002-CrumpNick-CollinsSam-FlahertyLogan-Project5\obj\Debug\net6.0\1260-002-Project5.dll
+C:\Users\nicka\Documents\College Documents\Classes\CSCI 1260 - Intro to Comp. Sci. 2\Projects\1260-002-CrumpNick-CollinsSam-FlahertyLogan-Project5\obj\Debug\net6.0\refint\1260-002-Project5.dll
+C:\Users\nicka\Documents\College Documents\Classes\CSCI 1260 - Intro to Comp. Sci. 2\Projects\1260-002-CrumpNick-CollinsSam-FlahertyLogan-Project5\obj\Debug\net6.0\1260-002-Project5.pdb
+C:\Users\nicka\Documents\College Documents\Classes\CSCI 1260 - Intro to Comp. Sci. 2\Projects\1260-002-CrumpNick-CollinsSam-FlahertyLogan-Project5\obj\Debug\net6.0\1260-002-Project5.genruntimeconfig.cache
+C:\Users\nicka\Documents\College Documents\Classes\CSCI 1260 - Intro to Comp. Sci. 2\Projects\1260-002-CrumpNick-CollinsSam-FlahertyLogan-Project5\obj\Debug\net6.0\ref\1260-002-Project5.dll

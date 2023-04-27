@@ -126,7 +126,7 @@ static void Battling(Battle battle)
     
     while (battle.IsBattling == true)
     {
-        //Thread.Sleep(700);
+        Thread.Sleep(700);
         if (battle.Turn == 0)
         {
             Console.WriteLine("It's your turn.");

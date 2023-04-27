@@ -153,7 +153,7 @@ namespace Project_5
             bool pickUpCheck = false;
             foreach (BaseWeapon item in Inventory)
             {
-                if (item.Name == dungeonCell.weapon.Name)
+                if (dungeonCell.weapon != null && item.Name == dungeonCell.weapon.Name)
                 {
                     pickUpCheck= true;
                 }

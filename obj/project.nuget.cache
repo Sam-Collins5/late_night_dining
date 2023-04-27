@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vHnDPy1vwHp3tnBPo/Ec+IvjAsf20VNd7rDsTHqCJGW3aZVG5uoZTCpl6jgbXa6Nv/BnPzHm1wtoDLnalNNvyg==",
+  "dgSpecHash": "kFrxeEgWcQwbfGGRANxPDx0KuBLysY8QETdgLxsc/g9UU5+XEcbWIDykeNeK8LteIdeZlaJxK0LgSemQ7IWhfg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\nicka\\Downloads\\late_night_dining-main\\1260-002-Project5.csproj",
+  "projectFilePath": "C:\\Users\\nicka\\Documents\\College Documents\\Classes\\CSCI 1260 - Intro to Comp. Sci. 2\\Projects\\1260-002-CrumpNick-CollinsSam-FlahertyLogan-Project5\\1260-002-Project5.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nicka\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.15\\microsoft.windowsdesktop.app.ref.6.0.15.nupkg.sha512",
     "C:\\Users\\nicka\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.15\\microsoft.netcore.app.ref.6.0.15.nupkg.sha512",

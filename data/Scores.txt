@@ -1,5 +1,5 @@
-Player;0
-Player;0
+ConeDomeAgain;3000
 Baller;3000
 Me;6000
+I'm Playing Pikmin Bloom Rn ;8500
 Nick;12000

@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nicka\\Downloads\\late_night_dining-main\\1260-002-Project5.csproj",
+      "projectUniqueName": "C:\\Users\\nicka\\Documents\\College Documents\\Classes\\CSCI 1260 - Intro to Comp. Sci. 2\\Projects\\1260-002-CrumpNick-CollinsSam-FlahertyLogan-Project5\\1260-002-Project5.csproj",
       "projectName": "1260-002-Project5",
-      "projectPath": "C:\\Users\\nicka\\Downloads\\late_night_dining-main\\1260-002-Project5.csproj",
+      "projectPath": "C:\\Users\\nicka\\Documents\\College Documents\\Classes\\CSCI 1260 - Intro to Comp. Sci. 2\\Projects\\1260-002-CrumpNick-CollinsSam-FlahertyLogan-Project5\\1260-002-Project5.csproj",
       "packagesPath": "C:\\Users\\nicka\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nicka\\Downloads\\late_night_dining-main\\obj\\",
+      "outputPath": "C:\\Users\\nicka\\Documents\\College Documents\\Classes\\CSCI 1260 - Intro to Comp. Sci. 2\\Projects\\1260-002-CrumpNick-CollinsSam-FlahertyLogan-Project5\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\nicka\\AppData\\Roaming\\NuGet\\NuGet.Config",
