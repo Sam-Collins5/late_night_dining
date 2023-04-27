@@ -305,5 +305,10 @@ namespace Project_5
                 map[playerPos.Item1, playerPos.Item2].player = player;
             }
         }
+
+        public DungeonCell GetPlayerCell()
+        {
+            return map[playerPos.Item1, playerPos.Item2];
+        }
     }
 }
