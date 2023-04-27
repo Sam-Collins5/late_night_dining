@@ -67,7 +67,18 @@ namespace Project_5
         //Methods
         public void PlayerAttack()
         {
-            Monster.health -= GetPlayerDamage(Weapon, Player.power, IsCrit);
+            if (Weapon is Gun)
+            {
+                Monster.health -= GetPlayerDamageWithGun((Gun)Weapon, Player.power, IsCrit);
+            }
+            else if (Weapon is PepperSpray)
+            {
+                Monster.health -= GetPlayerDamageWithPepperSpray((PepperSpray)Weapon, Player.power, IsCrit);
+            }
+            else
+            {
+                Monster.health -= GetPlayerDamage(Weapon, Player.power, IsCrit);
+            }
         }
 
         public void MonsterAttack()
@@ -111,6 +122,31 @@ namespace Project_5
             {
                 power = Player.power + Weapon.BonusDamage;
                 weapon.UsedAmmo();
+
+            }
+            else
+            {
+
+            }
+            return power;
+        }
+
+        public int GetPlayerDamageWithPepperSpray(PepperSpray weapon, int power, bool isCrit)
+        {
+            if (isCrit == true && Weapon != null)
+            {
+                power = (Player.power + weapon.BonusDamage) * 2;
+                weapon.AttackedWithSpray();
+            }
+            if (isCrit == true)
+            {
+                power = Player.power * 2;
+            }
+            else if (Weapon != null)
+            {
+                power = Player.power + Weapon.BonusDamage;
+                weapon.AttackedWithSpray();
+
             }
             else
             {
