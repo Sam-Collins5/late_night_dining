@@ -1,5 +1,5 @@
 Player;0
 Player;0
-Player;0
-Player;0
-Player;0
+Baller;3000
+Me;6000
+Nick;12000

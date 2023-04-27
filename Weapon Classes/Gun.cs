@@ -27,7 +27,7 @@ namespace Project_5.Weapon_Classes
         //Default
         public Gun() : base (6, "Gun", " A standard issue 9mm. Point and shoot. It has a limited amount of ammo.")
         {
-            Ammo = 0;
+            Ammo = 11;
         }
 
         //Partly parameterized

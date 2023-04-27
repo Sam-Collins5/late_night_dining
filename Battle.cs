@@ -25,7 +25,7 @@ namespace Project_5
         //Properties
         public bool IsBattling { get; set; }
         
-        public BaseWeapon? Weapon { get; private set; }
+        public BaseWeapon? Weapon { get; set; }
         public Player Player { get; private set; }
         public Monster Monster { get; private set; }
         
@@ -38,29 +38,20 @@ namespace Project_5
         public bool IsCrit { get; set; }
 
         //Constructor to initiate a battle if player has weapon.
-        public Battle(Player player, Monster monster, BaseWeapon weapon)
-        {
-            this.Player = player;
-            this.Monster = monster;
-            this.Weapon = weapon;
-            this.IsBattling = true;
-        }
-
-        //Constructor to initate a battle if player does not have a weapon.
         public Battle(Player player, Monster monster)
         {
             this.Player = player;
             this.Monster = monster;
-            this.Weapon = null;
+            this.Weapon = player.Hand;
             this.IsBattling = true;
         }
 
         //Copy constructor with weapon parameterization so that the player can switch weapons.
-        public Battle(Battle other, BaseWeapon weapon)
+        public Battle(Battle other)
         {
             this.Player = other.Player;
             this.Monster = other.Monster;
-            this.Weapon = weapon;
+            this.Weapon = other.Player.Hand;
             this.IsBattling = true;
         }
 
@@ -69,40 +60,36 @@ namespace Project_5
         {
             if (Weapon is Gun)
             {
-                Monster.health -= GetPlayerDamageWithGun((Gun)Weapon, Player.power, IsCrit);
+                Monster.Health -= GetPlayerDamageWithGun((Gun)Weapon, Player.Power, IsCrit);
             }
             else if (Weapon is PepperSpray)
             {
-                Monster.health -= GetPlayerDamageWithPepperSpray((PepperSpray)Weapon, Player.power, IsCrit);
+                Monster.Health -= GetPlayerDamageWithPepperSpray((PepperSpray)Weapon, Player.Power, IsCrit);
             }
             else
             {
-                Monster.health -= GetPlayerDamage(Weapon, Player.power, IsCrit);
+                Monster.Health -= GetPlayerDamage(Weapon, Player.Power, IsCrit);
             }
         }
 
         public void MonsterAttack()
         {
-            Player.health -= GetMonsterDamage(Monster.power, IsCrit);
+            Player.Health -= GetMonsterDamage(Monster.Power, IsCrit);
         }
 
         public int GetPlayerDamage(BaseWeapon weapon, int power, bool isCrit)
         {
             if (isCrit == true && Weapon != null)
             {
-                power = (Player.power + weapon.BonusDamage) * 2;
+                power = (Player.Power + weapon.BonusDamage) * 2;
             }
             if (isCrit == true)
             {
-                power = Player.power * 2;
+                power = Player.Power * 2;
             }
             else if (Weapon != null)
             {
-                power = Player.power + Weapon.BonusDamage;
-            }
-            else
-            {
-
+                power = Player.Power + Weapon.BonusDamage;
             }
             return power;
         }
@@ -111,55 +98,59 @@ namespace Project_5
         {
             if (isCrit == true && Weapon != null)
             {
-                power = (Player.power + weapon.BonusDamage) * 2;
+                power = (Player.Power + weapon.BonusDamage) * 2;
                 weapon.UsedAmmo();
             }
             if (isCrit == true)
             {
-                power = Player.power * 2;
+                power = (Player.Power + weapon.BonusDamage) * 2;
+                weapon.UsedAmmo();
             }
             else if (Weapon != null)
             {
-                power = Player.power + Weapon.BonusDamage;
+                power = Player.Power + weapon.BonusDamage;
                 weapon.UsedAmmo();
 
             }
-            else
-            {
-
-            }
             return power;
+        }
+
+        public int GetGunAmmo(Gun gun)
+        {
+            return gun.Ammo;
         }
 
         public int GetPlayerDamageWithPepperSpray(PepperSpray weapon, int power, bool isCrit)
         {
             if (isCrit == true && Weapon != null)
             {
-                power = (Player.power + weapon.BonusDamage) * 2;
+                power = (Player.Power + weapon.BonusDamage) * 2;
                 weapon.AttackedWithSpray();
             }
             if (isCrit == true)
             {
-                power = Player.power * 2;
+                power = Player.Power * 2;
+                weapon.AttackedWithSpray();
             }
             else if (Weapon != null)
             {
-                power = Player.power + Weapon.BonusDamage;
+                power = Player.Power + Weapon.BonusDamage;
                 weapon.AttackedWithSpray();
 
             }
-            else
-            {
-
-            }
             return power;
+        }
+
+        public bool GetPepperSprayLeft(PepperSpray spray)
+        {
+            return spray.SprayLeft;
         }
 
         public int GetMonsterDamage(int power, bool isCrit)
         {
             if (isCrit == true)
             {
-                power = Monster.power * 2;
+                power = Monster.Power * 2;
             }
             else
             {

@@ -1,0 +1,15 @@
+C:\Users\nicka\Downloads\late_night_dining-main\bin\Debug\net6.0\1260-002-Project5.exe
+C:\Users\nicka\Downloads\late_night_dining-main\bin\Debug\net6.0\1260-002-Project5.deps.json
+C:\Users\nicka\Downloads\late_night_dining-main\bin\Debug\net6.0\1260-002-Project5.runtimeconfig.json
+C:\Users\nicka\Downloads\late_night_dining-main\bin\Debug\net6.0\1260-002-Project5.dll
+C:\Users\nicka\Downloads\late_night_dining-main\bin\Debug\net6.0\1260-002-Project5.pdb
+C:\Users\nicka\Downloads\late_night_dining-main\obj\Debug\net6.0\1260-002-Project5.csproj.AssemblyReference.cache
+C:\Users\nicka\Downloads\late_night_dining-main\obj\Debug\net6.0\1260-002-Project5.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nicka\Downloads\late_night_dining-main\obj\Debug\net6.0\1260-002-Project5.AssemblyInfoInputs.cache
+C:\Users\nicka\Downloads\late_night_dining-main\obj\Debug\net6.0\1260-002-Project5.AssemblyInfo.cs
+C:\Users\nicka\Downloads\late_night_dining-main\obj\Debug\net6.0\1260-002-Project5.csproj.CoreCompileInputs.cache
+C:\Users\nicka\Downloads\late_night_dining-main\obj\Debug\net6.0\1260-002-Project5.dll
+C:\Users\nicka\Downloads\late_night_dining-main\obj\Debug\net6.0\refint\1260-002-Project5.dll
+C:\Users\nicka\Downloads\late_night_dining-main\obj\Debug\net6.0\1260-002-Project5.pdb
+C:\Users\nicka\Downloads\late_night_dining-main\obj\Debug\net6.0\1260-002-Project5.genruntimeconfig.cache
+C:\Users\nicka\Downloads\late_night_dining-main\obj\Debug\net6.0\ref\1260-002-Project5.dll

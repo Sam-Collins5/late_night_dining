@@ -83,7 +83,7 @@ namespace Project_5
             bool moveFlag = false;
             bool boundFlag = false;
 
-            if (direction.ToLower() == "north")
+            if (direction.ToLower() == "north" || direction.ToLower() == "up" || direction.ToLower() == "^" || direction.ToLower() == "w")
             {
                 dungeonMap.MovePlayer(playerPos.Item1 - 1, playerPos.Item2);
                 if (dungeonMap.GetPlayerPos() == playerPos)
@@ -95,7 +95,7 @@ namespace Project_5
                     moveFlag = true;
                 }
             }
-            else if (direction.ToLower() == "east")
+            else if (direction.ToLower() == "east" || direction.ToLower() == "right" || direction.ToLower() == ">" || direction.ToLower() == "d")
             {
                 dungeonMap.MovePlayer(playerPos.Item1, playerPos.Item2 + 1);
                 if (dungeonMap.GetPlayerPos() == playerPos)
@@ -107,7 +107,7 @@ namespace Project_5
                     moveFlag = true;
                 }
             }
-            else if (direction.ToLower() == "south")
+            else if (direction.ToLower() == "south" || direction.ToLower() == "down" || direction.ToLower() == "v" || direction.ToLower() == "s")
             {
                 dungeonMap.MovePlayer(playerPos.Item1 + 1, playerPos.Item2);
                 if (dungeonMap.GetPlayerPos() == playerPos)
@@ -119,7 +119,7 @@ namespace Project_5
                     moveFlag = true;
                 }
             }
-            else if (direction.ToLower() == "west")
+            else if (direction.ToLower() == "west" || direction.ToLower() == "left" || direction.ToLower() == "<" || direction.ToLower() == "a")
             {
                 dungeonMap.MovePlayer(playerPos.Item1, playerPos.Item2 - 1);
                 if (dungeonMap.GetPlayerPos() == playerPos)
@@ -148,10 +148,67 @@ namespace Project_5
 
         //picks up an item if its an actual item
         //this command doesn't check to see if said item is present
-        public string PickUp(BaseWeapon item)
+        public string PickUp(DungeonCell dungeonCell)
         {
-            Inventory.Add(item);
-            return $"Picked up {item.Name}.";
+            bool pickUpCheck = false;
+            foreach (BaseWeapon item in Inventory)
+            {
+                if (item.Name == dungeonCell.weapon.Name)
+                {
+                    pickUpCheck= true;
+                }
+            }
+
+            if (dungeonCell.weapon != null && pickUpCheck != true)
+            {
+                Inventory.Add(dungeonCell.weapon);
+                string weaponName = dungeonCell.weapon.Name;
+                string weaponDesc = dungeonCell.weapon.Description;
+                dungeonCell.weapon = null;
+                return $"Picked up {weaponName}.\n{weaponDesc}";
+            }
+            else if (pickUpCheck == true)
+            {
+                return $"Already have {dungeonCell.weapon.Name} in inventory.";
+            }
+            else
+            {
+                return $"No item is in this cell.";
+            }
+        }
+
+        //equips a weapon from the inventory
+        public string Equip(string input)
+        {
+            foreach (BaseWeapon item in Inventory)
+            {
+                if (item.Name.ToLower() == input.ToLower())
+                {
+                    Hand = item;
+                    return $"Equiped {item.Name}.";
+                }
+            }
+            if (input == "" || input == "nothing" || input == "null" || input == "none" || input == "hands")
+            {
+                Hand = null;
+                return "Removed weapon.";
+            }
+            return $"You do not have a {input}.";
+        }
+
+        //Throw away a weapon from the inventory
+        public string ThrowAway(string input)
+        {
+            foreach (BaseWeapon item in Inventory)
+            {
+                if (item.Name.ToLower() == input.ToLower())
+                {
+                    string throwInfo = $"Threw away {item.Name}.";
+                    Inventory.Remove(item);
+                    return throwInfo;
+                }
+            }
+            return $"You do not have a {input}.";
         }
 
         //displays inventory
@@ -319,7 +376,7 @@ namespace Project_5
                 Desc = "Traveler was critically wounded and has fainted.";
             }
 
-            return $"Name: {Name}\nHolding: {Hand}\nHP: {Health}\nATK: {Power}\nDesc: {Desc}\n{DisplayInventory()}";
+            return $"Score: {Score}\nName: {Name}\nHolding: {Hand}\nHP: {Health}\nATK: {Power}\nDesc: {Desc}\n{DisplayInventory()}";
         }
         //------------------------------------------------------------------------------------------------------
 
