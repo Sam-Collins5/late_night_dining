@@ -26,7 +26,6 @@ namespace Project_5
         public string Desc { get; set; }
         public int Health { get; set; }
         public int Power { get; set; }
-        public int[] Pos { get; set; }
         //------------------------------------------------------------------------------------------------------
 
 
@@ -39,7 +38,6 @@ namespace Project_5
             this.Desc = "A being that is not suppose to be here.";
             this.Health = 1;
             this.Power = 0;
-            this.Pos = new int[2];
         }
 
         public Beings(string name, string desc)
@@ -48,7 +46,6 @@ namespace Project_5
             this.Desc = desc;
             this.Health = 1;
             this.Power = 0;
-            this.Pos = new int[2];
         }
 
         public Beings(Beings another)
@@ -57,7 +54,6 @@ namespace Project_5
             this.Desc = another.Desc;
             this.Health = another.Health;
             this.Power = another.Power;
-            this.Pos = another.Pos;
         }
         //------------------------------------------------------------------------------------------------------
 

@@ -19,6 +19,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
+using Project_5.Weapon_Classes;
 
 namespace Project_5
 {
@@ -26,12 +27,10 @@ namespace Project_5
     {
         //attributes
         //------------------------------------------------------------------------------------------------------
-        //change these to Weapon objects
-        public string Hand { get; set; }
-        public List<string> Inventory { get; set; }
+        public BaseWeapon Hand { get; set; }
+        public List<BaseWeapon> Inventory { get; set; }
         public int Score { get; set; }
 
-        //-------------------------------
         //------------------------------------------------------------------------------------------------------
 
         //constructors
@@ -44,14 +43,8 @@ namespace Project_5
             this.Power = 5;
             this.Score = 0;
 
-            this.Pos = new int[2];
-            this.Pos[0] = 0;
-            this.Pos[1] = 0;
-
-            //change these to Weapon objects
-            this.Hand = "fists";
-            this.Inventory = new List<string>();
-            //-------------------------------
+            this.Hand = null;
+            this.Inventory = new List<BaseWeapon>();
         }
 
         public Player(string name)
@@ -62,14 +55,8 @@ namespace Project_5
             this.Power = 5;
             this.Score = 0;
 
-            this.Pos = new int[2];
-            this.Pos[0] = 0;
-            this.Pos[1] = 0;
-
-            //change these to Weapon objects
-            this.Hand = "fists";
-            this.Inventory = new List<string>();
-            //-------------------------------
+            this.Hand = null;
+            this.Inventory = new List<BaseWeapon>();
         }
 
         public Player(Player another)
@@ -78,7 +65,6 @@ namespace Project_5
             this.Desc = another.Desc;
             this.Health = another.Health;
             this.Power = another.Power;
-            this.Pos = another.Pos;
             this.Hand = another.Hand;
             this.Inventory = another.Inventory;
             this.Score = another.Score;
@@ -90,55 +76,91 @@ namespace Project_5
         //------------------------------------------------------------------------------------------------------
 
         //this command does not check to see if room exists
-        public string Move(string direction)
+        public string Move(string direction, DungeonMap dungeonMap)
         {
             //check to see if player moved
+            (int, int) playerPos = dungeonMap.GetPlayerPos();
             bool moveFlag = false;
+            bool boundFlag = false;
 
             if (direction.ToLower() == "north")
             {
-                this.Pos[1] += 1;
-                moveFlag = true;
+                dungeonMap.MovePlayer(playerPos.Item1 - 1, playerPos.Item2);
+                if (dungeonMap.GetPlayerPos() == playerPos)
+                {
+                    boundFlag = true;
+                }
+                else
+                {
+                    moveFlag = true;
+                }
             }
             else if (direction.ToLower() == "east")
             {
-                this.Pos[0] += 1;
-                moveFlag = true;
+                dungeonMap.MovePlayer(playerPos.Item1, playerPos.Item2 + 1);
+                if (dungeonMap.GetPlayerPos() == playerPos)
+                {
+                    boundFlag = true;
+                }
+                else
+                {
+                    moveFlag = true;
+                }
             }
             else if (direction.ToLower() == "south")
             {
-                this.Pos[1] -= 1;
-                moveFlag = true;
+                dungeonMap.MovePlayer(playerPos.Item1 + 1, playerPos.Item2);
+                if (dungeonMap.GetPlayerPos() == playerPos)
+                {
+                    boundFlag = true;
+                }
+                else
+                {
+                    moveFlag = true;
+                }
             }
             else if (direction.ToLower() == "west")
             {
-                this.Pos[0] -= 1;
-                moveFlag = true;
+                dungeonMap.MovePlayer(playerPos.Item1, playerPos.Item2 - 1);
+                if (dungeonMap.GetPlayerPos() == playerPos)
+                {
+                    boundFlag = true;
+                }
+                else
+                {
+                    moveFlag = true;
+                }
             }
 
             if (moveFlag == true)
             {
                 return $"Moved {direction}.";
             }
-
-            return $"{direction} is not a valid direction.";
+            else if (boundFlag == true)
+            {
+                return $"{direction} is out of bounds";
+            }
+            else
+            {
+                return $"{direction} is not a valid direction.";
+            }
         }
 
         //picks up an item if its an actual item
         //this command doesn't check to see if said item is present
-        public string PickUp(string item)
+        public string PickUp(BaseWeapon item)
         {
             Inventory.Add(item);
-            return $"Picked up {item}.";
+            return $"Picked up {item.Name}.";
         }
 
         //displays inventory
         public string DisplayInventory()
         {
             string invString = "Inventory:\n";
-            foreach (string item in Inventory)
+            foreach (BaseWeapon item in Inventory)
             {
-                invString += item + ",\n";
+                invString += $"{item.Name}" + ",\n";
             }
             return invString;
         }

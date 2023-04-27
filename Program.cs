@@ -4,7 +4,18 @@
 Player player = new Player();
 Monster monster = new Monster();
 Battle battle = new Battle(player, monster);
+DungeonMap dungeonMap = new DungeonMap();
 Battling(battle);
+
+while (true)
+{
+    Console.WriteLine($"\n{dungeonMap.GetMapDisplay()}\n{dungeonMap.GetPlayerPos()}");
+    string uInput = "";
+    uInput = Console.ReadLine();
+    Console.WriteLine(player.Move(uInput, dungeonMap));
+    Console.WriteLine();
+}
+
 
 //Method for running a battle
 static void Battling(Battle battle)

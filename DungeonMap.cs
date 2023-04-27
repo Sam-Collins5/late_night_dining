@@ -298,7 +298,7 @@ namespace Project_5
 
         public void MovePlayer(int row, int column)
         {
-            if (row <= rows && column <= columns)
+            if (row < rows && row >= 0 && column < columns && column >= 0)
             {
                 map[playerPos.Item1, playerPos.Item2].player = null;
                 playerPos = (row, column);

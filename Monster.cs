@@ -42,7 +42,6 @@ namespace Project_5
             int randType = random.Next(1, 42);
 
             this.Name = (Names)Enum.Parse(typeof(Names), Convert.ToString(randName));
-            this.Pos = new int[2];
 
             //reads from the Monster.txt file to get the data of the random monster
             //each line is as follows Type,Power,Health,Desc,Attack
@@ -91,7 +90,6 @@ namespace Project_5
             this.Health = another.Health;
             this.Power = another.Power;
             this.Attack = another.Attack;
-            this.Pos = another.Pos;
         }
         //------------------------------------------------------------------------------------------------------
 
