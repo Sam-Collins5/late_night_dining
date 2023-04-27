@@ -25,13 +25,13 @@ namespace Project_5.Weapon_Classes
 
         //Constructors
         //Default
-        public Gun() : base (6, "Gun", " A standard issue 9mm. Point and shoot.")
+        public Gun() : base (6, "Gun", " A standard issue 9mm. Point and shoot. It has a limited amount of ammo.")
         {
             Ammo = 0;
         }
 
         //Partly parameterized
-        public Gun(int ammo) : base(6, "Gun", " A standard issue 9mm. Point and shoot.")
+        public Gun(int ammo) : base(6, "Gun", " A standard issue 9mm. Point and shoot. It has a limited amount of ammo.")
         {
             Ammo = ammo;
         }

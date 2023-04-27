@@ -14,7 +14,7 @@ namespace Project_5.Weapon_Classes
 
         //Constructors
         //Default
-        public PepperSpray() : base (0, "Pepper Spray", "A small pink bejeweled canister full of spicy juice.")
+        public PepperSpray() : base (0, "Pepper Spray", "A small pink bejeweled canister full of spicy juice. It has one use before it runs out.")
         {
             SprayLeft = true;
             UsedSpray = false;
